@@ -1,7 +1,7 @@
 /* header */
-@use "../abstracts/variables" as var;
-@use "../abstracts/mixins";
-@use "../base/typography" as type;
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+@use '../base/typography' as type;
 
 .header {
   @include mixins.flex-column();
@@ -15,6 +15,7 @@
     font-size: type.$display-title-size;
     letter-spacing: type.$display-spacing;
     text-align: center;
+    font-variation-settings: 'wght' 300, 'opsz' 20, 'SOFT' 100, 'WONK' 1;
   }
 
   &__img {
@@ -26,12 +27,15 @@
     margin-bottom: 1rem;
     font-size: type.$body-font-size;
     font-weight: type.$body-font-weight;
+    line-height: 2em;
     padding: 0rem 5vw;
+    font-variation-settings: 'wght' 555, 'opsz' 25, 'SOFT' 100, 'WONK' 1;
 
     &--first {
       font-style: italic;
       font-weight: type.$body-italic-weight;
       letter-spacing: 0.15em;
+      font-variation-settings: 'wght' 300, 'opsz' 20, 'SOFT' 100, 'WONK' 1 !important;
     }
   }
 }
